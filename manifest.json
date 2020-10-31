@@ -2,13 +2,13 @@
     "name": "My First PWA",
     "short_name": "My PWA",
     "description": "My First PWA",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#81D6E3",
     "theme_color": "#81D6E3",
     "icons": [
         {
-            "src": "/img/icon.png",
+            "src": "./img/icon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
