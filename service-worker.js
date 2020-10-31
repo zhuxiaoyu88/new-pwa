@@ -1,13 +1,26 @@
-const CACHE_NAME = "first-pwa-v01";
+const CACHE_NAME = "first-pwa-v02";
 var urlsToCache = [
   "./",
   "./nav.html",
   "./index.html",
   "./img/icon.png",
+  "./img/apple.jpg",
+  "./img/banner-home.jpg",
+  "./img/blueberry.jpg",
+  "./img/call-me.jpg",
+  "./img/salad.jpg",
+  "./img/veggie.jpg",
   "./pages/home.html",
   "./pages/about.html",
+  "./pages/product.html",
+  "./pages/blog.html",
   "./pages/contact.html",
+  "./fonts/Itim-Regular.ttf",
+  "./fonts/OpenSans-Regular.ttf",
+  "./fonts/OpenSans-Light.ttf",
+  "./fonts/OpenSans-SemiBold.ttf",
   "./css/materialize.min.css",
+  "./css/style.css",
   "./js/materialize.min.js",
   "./js/nav.js",
 ];
@@ -26,14 +39,9 @@ self.addEventListener("fetch", function(event) {
       .match(event.request, { cacheName: CACHE_NAME })
       .then(function(response) {
         if (response) {
-          console.log("ServiceWorker: Gunakan aset dari cache: ", response.url);
           return response;
         }
- 
-        console.log(
-          "ServiceWorker: Memuat aset dari server: ",
-          event.request.url
-        );
+
         return fetch(event.request);
       })
   );

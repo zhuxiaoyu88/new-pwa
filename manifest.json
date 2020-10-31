@@ -1,11 +1,11 @@
 {
-    "name": "My First PWA",
-    "short_name": "My PWA",
-    "description": "My First PWA",
+    "name": "Hittie",
+    "short_name": "",
+    "description": "Fresh Veggies and Fruits | Hittie",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#81D6E3",
-    "theme_color": "#81D6E3",
+    "background_color": "#aed9e0",
+    "theme_color": "#aed9e0",
     "icons": [
         {
             "src": "/img/icon.png",

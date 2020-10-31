@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Activate sidebar nav
   var elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);
   loadNav();
@@ -9,19 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4) {
         if (this.status != 200) return;
- 
-        // Muat daftar tautan menu
+
         document.querySelectorAll(".topnav, .sidenav").forEach(function(elm) {
           elm.innerHTML = xhttp.responseText;
         });
 
         document.querySelectorAll(".sidenav a, .topnav a").forEach(function(elm) {
           elm.addEventListener("click", function(event) {
-            // Tutup sidenav
             var sidenav = document.querySelector(".sidenav");
             M.Sidenav.getInstance(sidenav).close();
    
-            // Muat konten halaman yang dipanggil
             page = event.target.getAttribute("href").substr(1);
             loadPage(page);
           });
@@ -44,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (this.status == 200) {
           content.innerHTML = xhttp.responseText;
         } else if (this.status == 404) {
-          content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
+          content.innerHTML = "<center>Not found.</center>";
         } else {
-          content.innerHTML = "<p>Ups.. halaman tidak dapat diakses.</p>";
+          content.innerHTML = "<center>Ups.. Page can't be accessed.</center>";
         }
       }
     };
