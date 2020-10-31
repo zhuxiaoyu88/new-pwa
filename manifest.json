@@ -2,13 +2,13 @@
     "name": "Hittie",
     "short_name": "",
     "description": "Fresh Veggies and Fruits | Hittie",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#aed9e0",
     "theme_color": "#aed9e0",
     "icons": [
         {
-            "src": "/img/icon.png",
+            "src": "./img/icon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
