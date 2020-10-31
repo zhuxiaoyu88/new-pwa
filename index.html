@@ -3,7 +3,7 @@
 <head>
 	<title>First PWA</title>
 	<meta charset="utf-8">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#81D6E3"/>
 	<meta name="description" content="My first PWA"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker
-          .register("/service-worker.js")
+          .register("service-worker.js")
           .then(function() {
             console.log("Pendaftaran ServiceWorker berhasil");
           })
